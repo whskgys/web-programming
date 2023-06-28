@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>마우스 클릭 연습</title>
+	<style>
+		table { 
+			border : 1px solid blue; 
+			border-collapse : collapse; 
+		}
+		td { 
+			border : 1px solid blue; 
+			width : 50px; 
+			height : 50px;
+			padding : 0px; 
+		}
+	</style>
+       <script>
+        let banana = new Image();
+        banana.src="banana.jpeg"
+        banana.width = 45;
+        banana.height = 45;
+        banana.onclick = moveImage;
+
+
+        let tds = null;
+        function init(){
+            tds = document.querySelectorAll("td");
+            pos=Math.floor(Math.random()*100);
+            tds[pos].appendChild(banana);
+        }
+        function moveImage(){
+            let img= tds[pos].removeChild(banana);
+            pos=Math.floor(Math.random()*100);
+            tds[pos].appendChild(banana);
+        }
+    </script>
+
+</head>
+<body onload="init()">
+    <h2>마우스 클릭 연습</h2>
+    <hr>
+    <table>
+        <tr>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+        </tr>
+        <tr>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+        </tr>
+        <tr>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+        </tr>
+        <tr>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+        </tr>
+        <tr>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+        </tr>
+        <tr>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+        </tr>
+        <tr>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+        </tr>
+        <tr>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+        </tr>
+        <tr>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+        </tr>
+        <tr>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+        </tr>
+
+    </table>
+</body>
+</html>

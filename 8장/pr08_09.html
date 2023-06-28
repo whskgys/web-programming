@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>라면</title>
+    <style>
+        ol{
+            background-color:yellowgreen;
+
+        }
+    </style>
+    <script>
+        function addItem(){
+            let ol=document.getElementsByTagName('ol');
+            let newStep=prompt("라면을 끓이는 순서를 입력하라");
+            let newNode=document.createElement('li');
+            newNode.innerHTML=newStep;
+            ol.item(0).appendChild(newNode);
+        }
+    </script>
+</head>
+<body>
+    <h2>라면 끓이는 순서</h2>
+    <hr>
+    <ol type ="A" onclick="addItem()">
+        <li>물을 끓인다.</li>
+        <li>봉지에서 라면을 미리 꺼내놓는다.</li>
+    </ol>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>실습문제 7번</title>
+	
+	<script>
+		var n = 0;
+		
+		function change(obj) {
+			n += 90;
+			obj.style.transform = "rotate(" + n + "deg)";
+		}
+	</script>
+
+</head>
+<body>
+	<h3>클릭하면 90도 회전합니다.</h3>
+	<hr>
+	<img src="sponge.jpeg" width="30%" height="30%" onclick="change(this)">
+</body>
+</html>

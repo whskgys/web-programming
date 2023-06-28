@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setInterval()/clearInterval()</title>
+    <style>
+        #div {
+            height: 50px;
+            cursor: pointer;
+        }
+    </style>
+     <script>
+        var refresh = null;
+
+        function clock() {
+            var div = document.getElementById("div");
+            var date = new Date();
+            var time = date.toLocaleTimeString();
+            div.innerHTML = time;
+        }
+
+        function startClock() {
+            if (refresh === null) {
+                refresh = setInterval(clock, 1000);
+                document.getElementById("div").style.color = "black";
+            }
+        }
+
+        function stopClock() {
+            if (refresh !== null) {
+                clearInterval(refresh);
+                refresh = null;
+                document.getElementById("div").style.color = "gray";
+            } 
+            else{
+                startClock();
+            }
+        }
+    </script>
+</head>
+<body onload="startClock()">
+    <h2>div 태그에 시계 만들기</h2>
+    <hr>
+    <p>현재 시간이다 이놈아</p>
+    <div onclick="stopClock()" id="div"></div>
+</body>
+</html>

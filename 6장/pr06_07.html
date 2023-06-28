@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>큰자리 낮은자리</title>
+</head>
+<body>
+    <h2>큰 자리수와 낮은자리수 같은지 비교</h2>
+    <hr>
+    <script>
+        let input=prompt("숫자입력: ",0);
+        
+        input=parseInt(input);
+        let lastDigit=input%10;
+        let firstDigit=input;
+        while(firstDigit >= 10){
+            firstDigit /= 10;
+        }
+        if(parseInt(firstDigit) == lastDigit){
+            document.write(input + " 같음");
+        }
+        else {
+            document.write(input + " 다름");
+        }
+            
+    </script>
+</body>
+</html>

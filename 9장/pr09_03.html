@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onkeydown</title>
+    <script>
+        function procKey(e){
+            if(e.key=="Enter"){
+                let result=document.querySelector('#result');
+                result.value=eval(e.target.value);
+            }
+            return true;
+
+        }
+    </script>
+</head>
+<body>
+    <h2>계산기 만들기</h2>
+    <hr>
+    <p>수식을 입력하고 &lt;Enter&gt; 를 입력하세요</p>
+    <form>
+        식 <input id="exp" type="text" onkeydown="procKey(event);"> <br>
+        값 <input id="result" type="text" >
+    </form>
+</body>
+</html>

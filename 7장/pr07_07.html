@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>색 테이블</title>
+    <style>
+        div{
+            display:inline-block;
+            width:60px;
+            height:20px;
+            padding:10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>17개의 css3 색 이름과 색</h2>
+    <script>
+        let colorNames = ["maroon","red","orange","yellow","olive","purple",
+                         "fuchsia","white","lime","green","navy","blue","aqua","teal","black","silver","gray"];
+        for(let i=0; i<colorNames.length; i++){
+            document.write("<div style=background-color:"+colorNames[i]+">" + colorNames[i] + "</div>");
+            
+        }
+    </script>
+    
+</body>
+</html>

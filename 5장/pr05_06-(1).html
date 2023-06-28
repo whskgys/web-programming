@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation</title>
+</head>
+<style>
+    img:hover{
+        animation-name:sponge;
+        animation-duration: 1s;
+    }
+   
+    @keyframes sponge{
+        from {transform:rotate(0deg);}
+        to {transform:rotate(360deg);}
+    }
+</style>
+<body>
+    <h2>어지러워요</h2>
+    <hr>
+    <div>
+    <img src="sponge.jpeg" width="200">
+    </div>
+</body>
+</html>
